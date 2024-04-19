@@ -10,7 +10,8 @@ function NavBar() {
 
     const getWeather = () => {
         const apiKey = '60162dd23e20513ff670f6aa4c5a940c';
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${apiKey}&units=metric`;
+        // const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${apiKey}&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=53.3491019&lon=-6.2446622&appid=${apiKey}&units=metric`;
 
         fetch(url)
             .then(response => response.json())
@@ -41,6 +42,8 @@ function NavBar() {
                 console.log("position: ", position);
                 if (location.latitude) {
                     console.log("Location set");
+                    console.log("lat: ", location.latitude);
+                    console.log("lon: ", location.longitude);
                     // getWeather();
                 }
             },
