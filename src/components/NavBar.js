@@ -56,9 +56,7 @@ function NavBar() {
     }, [setUserId]);
 
     useEffect(() => {
-        if (location.latitude && location.longitude) {
-            getWeather();
-        }
+        getWeather();
     }, [location]);
 
     const handleLogout = () => {
